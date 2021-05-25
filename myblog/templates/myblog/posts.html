@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %} 
+All My Posts
+{% endblock %} 
+
+{% block css_files %}
+  <link rel="stylesheet" href="{% static "myblog/post.css" %}" />
+  <link rel="stylesheet" href="{% static "myblog/all-posts.css" %}" />
+{% endblock %}
+
+{% block content %}
+<section id="all-posts">
+  <h2>My Collected Posts</h2>
+
+  <ul>
+    {% for post in all_posts %}
+      {% include "myblog/includes/post.html" %}
+    {% endfor %}
+  </ul>
+</section>
+{% endblock %}
+© 2021 GitHub, Inc.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% comment %} {% extends "base.html" %}
+{% load static %}
+
+{% block title %} 
+All My Posts
+{% endblock %} 
+
+{% block css_files %}
+  {% comment %} <link rel="stylesheet" href="{% static "myblog/index.css"%}"> {% endcomment %}
+  {% comment %} <link rel="stylesheet" href="{% static "myblog/post.css" %}" />
+
+  <link rel="stylesheet" href="{% static "myblog/all-posts.css" %}" />
+{% endblock %}
+
+{% block content %}
+<section id="all-posts">
+  <h2>My Collected Posts</h2>
+
+  <ul>
+    {% for post in all_posts %}
+      {% include "myblog/includes/post.html" %}
+    {% endfor %}
+  </ul>
+</section>
+{% endblock %} {% endcomment %}
+
+
+
+
+
+
+
+
+
+ 

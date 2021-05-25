@@ -1,0 +1,41 @@
+{% extends "base.html" %} {% load static %}  
+{% block css_files %}
+      <link rel="stylesheet" href="{% static "myblog/index.css"%}">
+      <link rel="stylesheet" href="{% static "myblog/every-posts.css"%}">
+      <link rel="stylesheet" href="{% static "myblog/all-posts.css"%}">
+
+
+ {% endblock %}
+{% block content %}
+
+<section id="latest-posts">
+  <h2>My Latest Thoughts</h2>
+  <ul>
+    {% for post in posts     %}
+      {% include "myblog/includes/post.html" %}
+    {% endfor %}
+  </ul>
+</section>
+
+<section id="about">
+  <h2>A little bit about myself</h2>
+
+   <p>
+    I used to have happiness, joy, security, freedom, success and all the other
+    stuff as my goals, fear and competion as the driving force behind 
+    anything i do. Well, not anymore! Now i know that i was created happy, complete, free, in abundance and with total love and peace, the things that no amount of money can possible buy.
+  </p>
+</section>
+
+  {% comment %} <p>
+    My only job is to love and be love! Everything else it's an effect of
+    already being. I extends my devine feminine beingness into art and sometimes
+    find myself on the opposite side, in my devine masculine, playing in the
+    Tech world of programming. I take everything as it comes because i know that
+    it's just about playing, nothing serious! Art is not what i am, its an
+    extension of what i already am, which is Love.
+  </p> {% endcomment %}
+
+ 
+
+{% endblock %}
